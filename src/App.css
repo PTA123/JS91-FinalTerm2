@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* Thay đổi font chữ */
+  /* font-size: 16px; Thêm kích thước font mặc định */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header */
 .App-header {
+  text-align: center;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(16px + 2vmin); /* Thay đổi kích thước font */
+  color: black;
+}
+
+/* Weather Form */
+.weather-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+.weather-form h1{
+  font-size: 2rem; /* Thay đổi kích thước font */
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.searchbar-form {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Weather Board */
+.weather-board {
+  margin-top: 20px;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.temp {
+  .temp {
+    font-size: 20px; /* Chỉ định kích thước cố định cho nhiệt độ */
   }
-  to {
-    transform: rotate(360deg);
-  }
+  margin-top: 20px;
+  
+}
+
+.description {
+  margin: 10px 0;
+}
+
+.humidity {
+  margin-top: 10px;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.loading {
+  opacity: 0; /* Mặc định ẩn phần loading */
+  transition: opacity 0.5s ease-in-out; /* Hiệu ứng transition */
+}
+
+.loading.active {
+  opacity: 1; /* Hiển thị phần loading khi active */
+}
+
+.symbol-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.symbol-form i{
+  margin-top: 15px;
+  margin-right: 10px;
 }
